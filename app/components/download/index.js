@@ -38,14 +38,18 @@ const Download = () => {
 
   // 下载成功
   electron && electron.ipcRenderer.on('download-success', (e, data) => {
-    console.log(data)
+    // console.log(data)
     // 弹窗提示
-    message.info('下载成功了');
+    // message.info('下载成功了');
+    // 重制状态
+    setLoading(false);
+    setProcess(0);
   })
 
   // 取消下载成功
   electron && electron.ipcRenderer.on('cancle-download-success', (e, data) => {
     setLoading(false);
+    setProcess(0);
   })
 
   function onSearch() {

@@ -326,7 +326,6 @@ if (process.env.NODE_ENV === 'production') {
 let command;
 // ffmpeg 视频处理
 ipcMain.on('download', (e, data) => {
-
   downloadM3u8(data);
 })
 
@@ -336,6 +335,17 @@ ipcMain.on('cancel-download', (e, data) => {
     mainWindow.webContents.send('cancle-download-success', {});
   }
 })
+
+function throttle(fn, delay) {
+  let last = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - last > delay) {
+      last = now;
+      fn.apply(this, args);
+    }
+  }
+}
 
 function downloadM3u8(data) {
   if (command) {
@@ -365,6 +375,8 @@ function downloadM3u8(data) {
     })
     .on('end', function(){
       console.log('exchanged end ffmpeg')
+      // 会触发多次
+      mainWindow.webContents.send('download-success',{success: true})
     })
     .saveToFile(outputPath, function(retcode, error) {
       console.log('file has been converted succesfully');
