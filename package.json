@@ -1,13 +1,13 @@
 {
   "name": "cute-desktop",
-  "productName": "可爱龙",
+  "productName": "视频龙",
   "description": "视频桌面端工具",
   "repository": "git@github.com:archerU/cute-desktop.git",
   "author": "archerU",
   "license": "MIT",
   "version": "1.0.0",
   "main": "main.js",
-  "env": "development",
+  "env": "production",
   "scripts": {
     "dev": "webpack-dev-server --progress  --host localhost --port 8888 --contentBase app/app.js --hot",
     "start": "electron .",

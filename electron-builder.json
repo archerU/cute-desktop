@@ -1,0 +1,59 @@
+{
+  "appId": "com.electron.cute",
+  "productName": "视频龙",
+  "icon": "./media/images/icon.ico",
+  "files": [
+    "main.js",
+    "index.html",
+    "bundles",
+    "node_modules",
+    "updater/win/index.html",
+    "updater/build/bootstrap.js"
+  ],
+  "directories": {
+    "buildResources": "."
+  },
+  "electronDownload": {
+    "mirror": "https://cdn.npmmirror.com/binaries/electron/v"
+  },
+  "mac": {
+    "icon": "./media/images/icon.png",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false
+  },
+  "dmg": {
+    "iconSize": 85,
+    "contents": [
+      {
+        "x": 130,
+        "y": 208
+      },
+      {
+        "type": "link",
+        "path": "/Applications",
+        "x": 380,
+        "y": 208
+      }
+    ]
+  },
+  "win": {
+    "icon": "./media/images/icon.ico",
+    "publisherName": "lv zhou(China)Software Co.,Ltd.",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "perMachine": false,
+    "installerIcon": "./media/images/icon.ico",
+    "uninstallerIcon": "./media/images/icon.ico",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "视频龙"
+  }
+}

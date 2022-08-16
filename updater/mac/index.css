@@ -1,0 +1,67 @@
+body {
+  margin:0;
+  padding:0
+}
+.UpdaterWindow {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #17242d;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  -webkit-app-region: drag;
+}
+.updater-window__img {
+  width: 48px;
+}
+.UpdaterWindow-icon {
+  margin-right: 8px;
+}
+.UpdaterWindow-progressBarContainer {
+  position: relative;
+  margin-top: 40px;
+  background-color: #09161d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.UpdaterWindow-progressBar {
+  height: 8px;
+  background-color: #31c3a2;
+}
+.UpdaterWindow-progressPercent {
+  width: 100%;
+  text-align: center;
+  color: #bdc2c4;
+  font-size: 14px;
+  margin: 16px 0 24px 0;
+}
+.UpdaterWindow-issues {
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 25px;
+  -webkit-app-region: no-drag;
+}
+.UpdaterWindow-link {
+  color: #bbb;
+  cursor: pointer;
+}
+.UpdaterWindow-link:hover {
+  color: #eee;
+}
+
+.updaterImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.faSpin {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
